@@ -564,27 +564,28 @@ window.onload = function() {
         if (gameover) {
             tryNewGame();
         } else {
-            if (e.keyCode == 37 || e.keyCode == 65) {
-                // Left or A
-                if (snake.direction != 1)  {
-                    snake.direction = 3;
-                }
-            } else if (e.keyCode == 38 || e.keyCode == 87) {
-                // Up or W
-                if (snake.direction != 2)  {
-                    snake.direction = 0;
-                }
-            } else if (e.keyCode == 39 || e.keyCode == 68) {
-                // Right or D
-                if (snake.direction != 3)  {
-                    snake.direction = 1;
-                }
-            } else if (e.keyCode == 40 || e.keyCode == 83) {
-                // Down or S
-                if (snake.direction != 0)  {
-                    snake.direction = 2;
-                }
-            }
+            snake.direction = (snake.direction + 1) % 4
+            // if (e.keyCode == 37 || e.keyCode == 65) {
+            //     // Left or A
+            //     if (snake.direction != 1)  {
+            //         snake.direction = 3;
+            //     }
+            // } else if (e.keyCode == 38 || e.keyCode == 87) {
+            //     // Up or W
+            //     if (snake.direction != 2)  {
+            //         snake.direction = 0;
+            //     }
+            // } else if (e.keyCode == 39 || e.keyCode == 68) {
+            //     // Right or D
+            //     if (snake.direction != 3)  {
+            //         snake.direction = 1;
+            //     }
+            // } else if (e.keyCode == 40 || e.keyCode == 83) {
+            //     // Down or S
+            //     if (snake.direction != 0)  {
+            //         snake.direction = 2;
+            //     }
+            // }
             
             // Grow for demonstration purposes
             if (e.keyCode == 32) {
